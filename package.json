@@ -1,0 +1,51 @@
+{
+  "name": "contentfilter-react-1",
+  "version": "1.0.0",
+  "description": "Author: Jesus Salazar",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasbii/content-filter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasbii/content-filter/issues"
+  },
+  "homepage": "https://github.com/jasbii/content-filter#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@testing-library/react": "^11.1.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.1",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "jest": "^26.6.3",
+    "moxios": "^0.4.0",
+    "react-test-renderer": "^17.0.1",
+    "redux-mock-store": "^1.5.4",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "axios": "^0.21.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  }
+}
