@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.contentfilter.entity.AuthorizedSite;
 
 @Repository
-public interface AuthorizedSiteRepository extends CrudRepository<AuthorizedSite, Long>{
+public interface AuthorizedSiteRepository extends CrudRepository<AuthorizedSite, Long> {
 	public AuthorizedSite findByUrl(String url);
 }

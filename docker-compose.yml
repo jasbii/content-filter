@@ -1,0 +1,56 @@
+version: "3"
+services:
+  docker-mysql:
+    image: mysql:5.7
+    container_name: docker-mysql
+    ports:
+      - "9091:3306"
+    volumes:
+      - sql-spring:/var/lib/mysql
+    environment:
+      MYSQL_HOST: docker-mysql
+      MYSQL_PORT: 3306
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: index
+
+  lb:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - service1
+      - service2
+
+  service1:
+    image: jsalazarbez/contentfilter:0.0.1-SNAPSHOT
+    ports:
+      - "8181:80"
+    depends_on:
+      - docker-mysql
+    environment:
+      MYSQL_HOST: docker-mysql
+      MYSQL_PORT: 3306
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: index
+      INSTANCE: 1
+
+  service2:
+    image: jsalazarbez/contentfilter:0.0.1-SNAPSHOT
+    ports:
+      - "8282:80"
+    depends_on:
+      - docker-mysql
+    environment:
+      MYSQL_HOST: docker-mysql
+      MYSQL_PORT: 3306
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: index
+      INSTANCE: 2
+
+volumes:
+  sql-spring:

@@ -9,13 +9,15 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
+import Chip from "@material-ui/core/Chip";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return <div {...other}>{value === index && <Box p={3}>{children}</Box>}</div>;
 }
 
-export default function App() {
+export default function App(props) {
+  const { instance } = props;
   const [tab, setTab] = React.useState(0);
   const [values, setValues] = React.useState({ url: "", word: "" });
   const handleChange = (event, newTab) => {
@@ -36,6 +38,11 @@ export default function App() {
       <TabPanel value={tab} index={1}>
         <ListUrl />
       </TabPanel>
+      {instance != "unique" ? (
+        <center>
+          <Chip label={"This gui was served by instance: " + instance} />
+        </center>
+      ) : null}
     </Provider>
   );
 }
