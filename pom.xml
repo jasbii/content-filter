@@ -140,8 +140,10 @@
 					</execution>
 				</executions>
 				<configuration>
+					<serverId>nexus</serverId>
 					<skipDockerInfo>true</skipDockerInfo>
-					<repository>jsalazarbez/contentfilter</repository>
+					<imageName>http://btc01.dev.lab.plugbox.io:8081/repository/docker-host/contentfilter</imageName>
+					<!--repository>jsalazarbez/contentfilter</-repository-->
 					<tag>${project.version}</tag>
 				</configuration>
 				<dependencies>
