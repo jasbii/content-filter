@@ -24031,7 +24031,8 @@ function TabPanel(props) {
 }
 
 function App(props) {
-  var instance = props.instance;
+  var instance = props.instance,
+      version = props.version;
 
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__.useState(0),
       _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -24072,7 +24073,9 @@ function App(props) {
     index: 1
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_react_components_ListUrl__WEBPACK_IMPORTED_MODULE_2__.default, null)), instance != "unique" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Chip__WEBPACK_IMPORTED_MODULE_10__.default, {
     label: "This gui was served by instance: " + instance
-  })) : null);
+  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Chip__WEBPACK_IMPORTED_MODULE_10__.default, {
+    label: "App version: " + version
+  })));
 }
 
 /***/ }),
@@ -24521,7 +24524,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, {
-  instance: document.getElementById("root").getAttribute("data-instance")
+  instance: document.getElementById("root").getAttribute("data-instance"),
+  version: document.getElementById("root").getAttribute("data-version")
 }), document.getElementById("root"));
 
 /***/ }),

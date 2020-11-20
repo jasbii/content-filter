@@ -17,7 +17,7 @@ function TabPanel(props) {
 }
 
 export default function App(props) {
-  const { instance } = props;
+  const { instance, version } = props;
   const [tab, setTab] = React.useState(0);
   const [values, setValues] = React.useState({ url: "", word: "" });
   const handleChange = (event, newTab) => {
@@ -43,6 +43,9 @@ export default function App(props) {
           <Chip label={"This gui was served by instance: " + instance} />
         </center>
       ) : null}
+      <center>
+        <Chip label={"App version: " + version} />
+      </center>
     </Provider>
   );
 }

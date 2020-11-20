@@ -129,6 +129,7 @@
 					</execution>
 				</executions>
 				<configuration>
+					<skipDockerInfo>true</skipDockerInfo>
 					<repository>jsalazarbez/contentfilter</repository>
 					<tag>${project.version}</tag>
 				</configuration>

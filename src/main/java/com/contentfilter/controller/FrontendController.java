@@ -11,9 +11,13 @@ public class FrontendController {
   @Value("${server.instance}")
   private String instance;
 
+  @Value("${app.version}")
+  private String version;
+
   @RequestMapping(value = "/")
   public String index(ModelMap modelMap) {
     modelMap.addAttribute("instance", instance);
+    modelMap.addAttribute("version", version);
     return "index";
   }
 }
