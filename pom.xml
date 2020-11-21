@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.contentfilter</groupId>
 	<artifactId>contentfilter</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>1.2</version>
 	<name>contentfilter</name>
 	<description>Demo project for Spring Boot</description>
 
