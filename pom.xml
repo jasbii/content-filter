@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.contentfilter</groupId>
 	<artifactId>contentfilter</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>contentfilter</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -132,11 +132,28 @@
 				<version>1.4.3</version>
 				<executions>
 					<execution>
+						<id>tag-latest</id>
+						<goals>
+							<goal>build</goal>
+							<goal>tag</goal>
+							<goal>push</goal>
+						</goals>
+						<configuration>
+							<skipDockerInfo>true</skipDockerInfo>
+							<tag>latest</tag>
+						</configuration>
+					</execution>
+					<execution>
 						<id>default</id>
 						<goals>
 							<goal>build</goal>
+							<goal>tag</goal>
 							<goal>push</goal>
 						</goals>
+						<configuration>
+							<skipDockerInfo>true</skipDockerInfo>
+							<tag>${project.version}</tag>
+						</configuration>
 					</execution>
 				</executions>
 				<configuration>
@@ -144,8 +161,6 @@
 					<skipDockerInfo>true</skipDockerInfo>
 					<repository>btc01.dev.lab.plugbox.io:8082/contentfilter</repository>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-					<!--repository>jsalazarbez/contentfilter</-repository-->
-					<tag>${project.version}</tag>
 				</configuration>
 				<dependencies>
 					<!-- To make this work on JDK 9+ -->

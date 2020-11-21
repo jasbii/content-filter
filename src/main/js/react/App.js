@@ -39,9 +39,12 @@ export default function App(props) {
         <ListUrl />
       </TabPanel>
       {instance != "unique" ? (
-        <center>
-          <Chip label={"This gui was served by instance: " + instance} />
-        </center>
+        <div>
+          <center>
+            <Chip label={"This gui was served by instance: " + instance} />
+          </center>
+          <br />
+        </div>
       ) : null}
       <center>
         <Chip label={"App version: " + version} />
