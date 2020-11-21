@@ -25,7 +25,7 @@ services:
       - service2
 
   service1:
-    image: jsalazarbez/contentfilter:0.0.1-SNAPSHOT
+    image: btc01.dev.lab.plugbox.io:8082/contentfilter
     ports:
       - "8181:80"
     depends_on:
@@ -39,7 +39,7 @@ services:
       INSTANCE: 1
 
   service2:
-    image: jsalazarbez/contentfilter:0.0.1-SNAPSHOT
+    image: btc01.dev.lab.plugbox.io:8082/contentfilter
     ports:
       - "8282:80"
     depends_on:
