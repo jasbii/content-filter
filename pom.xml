@@ -142,7 +142,7 @@
 				<configuration>
 					<serverId>nexus</serverId>
 					<skipDockerInfo>true</skipDockerInfo>
-					<repository>btc01.dev.lab.plugbox.io:8081/repository/docker-host/contentfilter</repository>
+					<repository>btc01.dev.lab.plugbox.io:8082/contentfilter</repository>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 					<!--repository>jsalazarbez/contentfilter</-repository-->
 					<tag>${project.version}</tag>
