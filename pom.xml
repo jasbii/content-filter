@@ -161,6 +161,9 @@
 					<skipDockerInfo>true</skipDockerInfo>
 					<repository>btc01.dev.lab.plugbox.io:8082/contentfilter</repository>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+					<buildArgs>
+            <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+          </buildArgs>
 				</configuration>
 				<dependencies>
 					<!-- To make this work on JDK 9+ -->
